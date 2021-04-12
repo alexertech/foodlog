@@ -2,28 +2,24 @@
   Foodlog &ndash; <%= DateTime.now %>
 <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Meal type</th>
-      <th>Descript</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @entries.each do |entry| %>
-      <tr>
-        <td><%= entry.meal_type %></td>
-        <td><%= entry.descript %></td>
-        <td><%= link_to 'Show', entry %></td>
-        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Entry', new_entry_path %>
+<div class="columns mt-6 is-centered">
+  <% @entries.each do |entry| %>
+      <div class="column is-one-quarter">
+        <div class="card">
+        <header class="card-header">
+          <p class="card-header-title"><%= entry.meal_type %></p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p><div class="has-text-weight-bold"></div><%= entry.descript %></span></p>
+          </div>
+          <p class="italic">Logged  <%= time_ago_in_words(entry.created_at) %> ago</p>
+        </div>
+        <div class="card-footer">
+          <%= link_to 'Show', entry, class: "card-footer-item" %>
+          <%= link_to 'Edit', edit_entry_path(entry), class: "card-footer-item" %>
+          <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-footer-item" %>
+        </div>
+      </div>  
+  <% end %>
+</div>  
