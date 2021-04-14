@@ -13,7 +13,7 @@
             <div class="content">
               <p><div class="has-text-weight-bold"></div><%= entry.descript %></span></p>
             </div>
-            <p class="italic">Logged  <%= time_ago_in_words(entry.created_at) %> ago</p>
+            <p class="is-italic is-size-7">Logged  <%= time_ago_in_words(entry.created_at) %> ago</p>
           </div>
           <div class="card-footer">
             <%= link_to 'Show', entry, class: "card-footer-item" %>
