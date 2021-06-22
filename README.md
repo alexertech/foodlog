@@ -1,24 +1,20 @@
-# README
+# Food Rating
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple application using Ruby on Rails and Bulma as CSS template. The database is set for PostgreSQL. The current version allows you to create entries, edit and delete them. Also we can see all the entries per day, and see the calories count.
 
-Things you may want to cover:
+## To-Do:
 
-* Ruby version
+- User profiles
+- Improve the calendar
 
-* System dependencies
+## Tools
 
-* Configuration
+- `VScode`
+- Built on `Debian Linux`
+- `ruby 2.6.7p197`
+- `node v14.17.0`
+- `rails 6.1.3.1`
 
-* Database creation
+## Demo
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Food Log Demo](demo.gif)
